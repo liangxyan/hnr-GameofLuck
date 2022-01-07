@@ -1,7 +1,8 @@
 <template>
   <div>
     <br /><br /><br />
-    <h2>Round {{ this.counter }} <br /></h2>
+    <h2>Round {{ this.counter }}</h2>
+    <br />
     <table id="buttonRow" style="width: 85%">
       <thead></thead>
       <tbody>
@@ -17,14 +18,19 @@
       </tbody>
     </table>
 
-    <v-spacer></v-spacer>
-    <v-container v-if="counter > 1 && match == false">
-      oops try again :P
+    <v-spacer></v-spacer> <br />
+    <v-container id="outcome">
+      <v-col md="6" lg="6">
+        <v-card v-if="counter > 1 && match == false" width="500px" id="fail">
+          <v-card-text id="outcometxt">oops try again :P</v-card-text>
+        </v-card>
+      </v-col>
     </v-container>
 
     <v-dialog v-model="match" max-width="500" persistent>
       <v-card>
         <v-card-text>
+          <br />
           Congrats! It took you {{ this.counter }} rounds!!
         </v-card-text>
         <v-card-actions>
@@ -38,6 +44,7 @@
 
     <v-dialog v-model="out" max-width="500" persistent>
       <v-card>
+        <br />
         <v-card-text> Sorry! Out of tries :( </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
@@ -177,6 +184,7 @@ h2 {
   padding-left: 15%;
   padding-top: 20px;
 }
+
 #btn1,
 #btn2,
 #btn3,
@@ -184,5 +192,18 @@ h2 {
 #btn5 {
   min-width: 100%;
   height: 150px;
+}
+
+#outcome {
+  padding-left: 30%;
+}
+
+#fail {
+  background-color: lightgray;
+}
+
+#outcometxt {
+  font-size: large;
+  font-family: Helvetica;
 }
 </style>

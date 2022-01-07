@@ -16,7 +16,7 @@
 export default {};
 </script>
 
-<style scoped>
+<style>
 #bar {
   margin-top: 0;
   padding: 15px;
