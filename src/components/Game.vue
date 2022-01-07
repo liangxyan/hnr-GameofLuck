@@ -35,7 +35,7 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="green darken-1" @click="playAgain()">
+          <v-btn color="blue lighten-4" @click="playAgain()">
             Return to Start
           </v-btn>
         </v-card-actions>
@@ -48,7 +48,7 @@
         <v-card-text> Sorry! Out of tries :( </v-card-text>
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="green darken-1" @click="playAgain()">
+          <v-btn color="blue lighten-4" @click="playAgain()">
             Play Again
           </v-btn>
         </v-card-actions>

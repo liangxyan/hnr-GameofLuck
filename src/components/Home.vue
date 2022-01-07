@@ -1,17 +1,20 @@
 <template>
-  <div id="home">
-    <br /><br /><br />
-    <h2>Welcome!</h2>
-    <br />
-    <p>Feeling bored? Test your luck right here hic hic hic</p>
+  <div>
+    <div id="home">
+      <br /><br /><br />
+      <h2>Welcome!</h2>
+      <br />
+      <p>Feeling bored? Test your luck right here hic hic hic</p>
 
-    <h3>Instructions:</h3>
-    <p>
-      5 buttons, 10 rounds. Choose within 5 buttons and see if you picked the
-      correct button within 10 tries. <br />
-      No one really knows which button is THE ONE for each round!
-    </p>
-    <button v-on:click="start()" type="button">Start</button>
+      <h3>Instructions:</h3>
+      <p>
+        5 buttons, 10 rounds. Choose within 5 buttons and see if you picked the
+        correct button within 10 tries. <br />
+        No one really knows which button is THE ONE for each round!
+      </p>
+      <br />
+      <button v-on:click="start()" type="button">Start</button>
+    </div>
   </div>
 </template>
 
@@ -33,6 +36,7 @@ export default {
 
 <style scoped>
 #home {
+  margin: 2em;
   padding-left: 5em;
   padding-top: 1em;
   color: black;
@@ -49,7 +53,7 @@ h2 {
 button {
   background-color: #2e70d3;
   border-color: #2e70d3;
-  width: 100px;
+  width: 40%;
   height: 40px;
   float: center;
   right: 10cm;
@@ -67,11 +71,9 @@ button {
 }
 
 button:hover {
-  border: 2px solid #f3cfab;
-  background-color: #f3cfab;
+  border: 2px solid #90caf9;
+  background-color: #90caf9;
   color: white;
-  border-color: #f3cfab;
-  width: 100px;
   cursor: pointer;
 }
 
