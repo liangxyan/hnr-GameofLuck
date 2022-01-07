@@ -1,14 +1,21 @@
 <template>
   <div>
     <div id="header">A Very Random Game</div>
-    <div>
-      Round {{ this.counter }} <br />
-      <v-btn id="btn1" @click="matchNumber1()"> 1 </v-btn>
-      <v-btn id="btn2" @click="matchNumber2()"> 2 </v-btn>
-      <v-btn id="btn3" @click="matchNumber3()"> 3 </v-btn>
-      <v-btn id="btn4" @click="matchNumber4()"> 4 </v-btn>
-      <v-btn id="btn4" @click="matchNumber5()"> 5 </v-btn>
-    </div>
+    <h2>Round {{ this.counter }} <br /></h2>
+    <table id="buttonRow" style="width: 80%">
+      <thead></thead>
+      <tbody>
+        <td>
+          <v-btn id="btn1" @click="matchNumber1()"> 1 </v-btn>
+        </td>
+        <td>
+          <v-btn id="btn2" @click="matchNumber2()"> 2 </v-btn>
+        </td>
+        <td><v-btn id="btn3" @click="matchNumber3()"> 3 </v-btn></td>
+        <td><v-btn id="btn4" @click="matchNumber4()"> 4 </v-btn></td>
+        <td><v-btn id="btn4" @click="matchNumber5()"> 5 </v-btn></td>
+      </tbody>
+    </table>
 
     <v-dialog v-model="match" max-width="500">
       <v-card>
@@ -18,7 +25,7 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="green darken-1" @click="playAgain()">
-            Play Again
+            Return to Start
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -154,5 +161,23 @@ export default {
 <style scoped>
 #header {
   background-color: #2e70d3;
+}
+
+h2 {
+  padding-left: 15%;
+  padding-top: 20px;
+}
+
+#buttonRow {
+  padding-left: 20%;
+  padding-top: 20px;
+}
+#btn1,
+#btn2,
+#btn3,
+#btn4,
+#btn5 {
+  min-width: 100%;
+  height: 150px;
 }
 </style>
