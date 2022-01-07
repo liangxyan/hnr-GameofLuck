@@ -1,14 +1,8 @@
 <template>
   <v-app id="app">
-    <v-toolbar
-      app
-      dark
-      color="blue darken-4 white--text text--lighten-3"
-      id="bar"
-    >
-      <!-- put content here.... -->
+    <!-- <v-toolbar dark color="blue darken-4 white--text text--lighten-3" id="bar">
       <v-toolbar-title> A Very Random Game </v-toolbar-title>
-    </v-toolbar>
+    </v-toolbar> -->
     <router-view></router-view>
   </v-app>
 </template>

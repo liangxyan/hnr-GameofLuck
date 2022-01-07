@@ -1,7 +1,8 @@
 <template>
   <div id="home">
+    <div id="header">A Very Random Game</div>
     <p>hic hic hic</p>
-    <p>HelloWorld</p>
+    <p>Instructions: 10 rounds</p>
     <button v-on:click="start()" type="button">Start</button>
   </div>
 </template>
@@ -28,6 +29,11 @@ export default {
   color: black;
   height: 100%;
 }
+
+#header {
+  background-color: #2e70d3;
+}
+
 button {
   background-color: #2e70d3;
   border-color: #2e70d3;
