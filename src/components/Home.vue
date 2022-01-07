@@ -1,12 +1,8 @@
 <template>
   <div id="home">
-    <h1 id="shopname">A Very Random Game</h1>
-    <div id="foot">
-      <br />
-      <p>hic hic hic</p>
-      <p>HelloWorld</p>
-      <button v-on:click="start()" type="button">Start</button>
-    </div>
+    <p>hic hic hic</p>
+    <p>HelloWorld</p>
+    <button v-on:click="start()" type="button">Start</button>
   </div>
 </template>
 
@@ -27,25 +23,17 @@ export default {
 </script>
 
 <style scoped>
-#shopname {
-  font-size: 70px;
-  margin-top: 0;
-  padding-top: 25px;
-  font-style: italic;
-  font-family: "Remark";
-}
-
 #home {
   font-size: 20px;
   color: black;
   height: 100%;
 }
 button {
-  background-color: #f3cfab;
-  border-color: #f3cfab;
+  background-color: #2e70d3;
+  border-color: #2e70d3;
   width: 100px;
   height: 40px;
-  float: none;
+  float: center;
   right: 10cm;
   max-width: 70%;
   margin: 50px;
@@ -71,7 +59,7 @@ button:hover {
 
 p {
   font-size: 20px;
-  font-family: "Arial";
+  /*font-family: "Arial";*/
 }
 
 img {
