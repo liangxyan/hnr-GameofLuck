@@ -1,8 +1,8 @@
 <template>
   <div id="home">
     <div id="header">A Very Random Game</div>
-    <p>hic hic hic</p>
-    <p>Instructions: 10 rounds</p>
+    <p>Test your luck here hic hic hic</p>
+    <p>Instructions: 5 buttons, 10 rounds</p>
     <button v-on:click="start()" type="button">Start</button>
   </div>
 </template>
