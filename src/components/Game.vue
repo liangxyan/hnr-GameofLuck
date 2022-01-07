@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div id="header">A Very Random Game</div>
+    <br /><br /><br />
     <h2>Round {{ this.counter }} <br /></h2>
-    <table id="buttonRow" style="width: 80%">
+    <table id="buttonRow" style="width: 85%">
       <thead></thead>
       <tbody>
         <td>
@@ -17,7 +17,12 @@
       </tbody>
     </table>
 
-    <v-dialog v-model="match" max-width="500">
+    <v-spacer></v-spacer>
+    <v-container v-if="counter > 1 && match == false">
+      oops try again :P
+    </v-container>
+
+    <v-dialog v-model="match" max-width="500" persistent>
       <v-card>
         <v-card-text>
           Congrats! It took you {{ this.counter }} rounds!!
@@ -31,7 +36,7 @@
       </v-card>
     </v-dialog>
 
-    <v-dialog v-model="out" max-width="500">
+    <v-dialog v-model="out" max-width="500" persistent>
       <v-card>
         <v-card-text> Sorry! Out of tries :( </v-card-text>
         <v-card-actions>
@@ -59,7 +64,7 @@ export default {
   methods: {
     matchNumber1() {
       this.currNumber = 1;
-      this.targetNumber = Math.floor(Math.random() * (4 - 1 + 1) + 1);
+      this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
       if (this.targetNumber == this.currNumber && this.counter > 1) {
         console.log("Congrats!", this.counter);
         this.match = true;
@@ -76,7 +81,7 @@ export default {
     },
     matchNumber2() {
       this.currNumber = 2;
-      this.targetNumber = Math.floor(Math.random() * (4 - 1 + 1) + 1);
+      this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
       if (this.targetNumber == this.currNumber && this.counter > 1) {
         //this.counter = 0;
         console.log("Congrats!", this.counter);
@@ -94,7 +99,7 @@ export default {
     },
     matchNumber3() {
       this.currNumber = 3;
-      this.targetNumber = Math.floor(Math.random() * (4 - 1 + 1) + 1);
+      this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
       if (this.targetNumber == this.currNumber && this.counter > 1) {
         //this.counter = 0;
         console.log("Congrats!", this.counter);
@@ -112,7 +117,7 @@ export default {
     },
     matchNumber4() {
       this.currNumber = 4;
-      this.targetNumber = Math.floor(Math.random() * (4 - 1 + 1) + 1);
+      this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
       if (this.targetNumber == this.currNumber && this.counter > 1) {
         //this.counter = 0;
         console.log("Congrats!", this.counter);
@@ -130,7 +135,7 @@ export default {
     },
     matchNumber5() {
       this.currNumber = 5;
-      this.targetNumber = Math.floor(Math.random() * (4 - 1 + 1) + 1);
+      this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
       if (this.targetNumber == this.currNumber && this.counter > 1) {
         //this.counter = 0;
         console.log("Congrats!", this.counter);
@@ -164,12 +169,12 @@ export default {
 }
 
 h2 {
-  padding-left: 15%;
+  padding-left: 10em;
   padding-top: 20px;
 }
 
 #buttonRow {
-  padding-left: 20%;
+  padding-left: 15%;
   padding-top: 20px;
 }
 #btn1,

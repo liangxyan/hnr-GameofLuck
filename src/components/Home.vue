@@ -1,8 +1,16 @@
 <template>
   <div id="home">
-    <div id="header">A Very Random Game</div>
-    <p>Test your luck here hic hic hic</p>
-    <p>Instructions: 5 buttons, 10 rounds</p>
+    <br /><br /><br />
+    <h2>Welcome!</h2>
+    <br />
+    <p>Feeling bored? Test your luck right here hic hic hic</p>
+
+    <h3>Instructions:</h3>
+    <p>
+      5 buttons, 10 rounds. Choose within 5 buttons and see if you picked the
+      correct button within 10 tries. <br />
+      No one really knows which button is THE ONE for each round!
+    </p>
     <button v-on:click="start()" type="button">Start</button>
   </div>
 </template>
@@ -25,11 +33,15 @@ export default {
 
 <style scoped>
 #home {
-  font-size: 20px;
+  padding-left: 5em;
+  padding-top: 1em;
   color: black;
   height: 100%;
 }
 
+h2 {
+  font-size: 3em;
+}
 #header {
   background-color: #2e70d3;
 }
