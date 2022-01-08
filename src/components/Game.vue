@@ -7,14 +7,60 @@
       <thead></thead>
       <tbody>
         <td>
-          <v-btn id="btn1" @click="matchNumber1()"> 1 </v-btn>
+          <v-btn
+            id="btn1"
+            @click="
+              matchNumber1();
+              playSound();
+            "
+          >
+            1
+          </v-btn>
         </td>
         <td>
-          <v-btn id="btn2" @click="matchNumber2()"> 2 </v-btn>
+          <v-btn
+            id="btn2"
+            @click="
+              matchNumber2();
+              playSound();
+            "
+          >
+            2
+          </v-btn>
         </td>
-        <td><v-btn id="btn3" @click="matchNumber3()"> 3 </v-btn></td>
-        <td><v-btn id="btn4" @click="matchNumber4()"> 4 </v-btn></td>
-        <td><v-btn id="btn4" @click="matchNumber5()"> 5 </v-btn></td>
+        <td>
+          <v-btn
+            id="btn3"
+            @click="
+              matchNumber3();
+              playSound();
+            "
+          >
+            3
+          </v-btn>
+        </td>
+        <td>
+          <v-btn
+            id="btn4"
+            @click="
+              matchNumber4();
+              playSound();
+            "
+          >
+            4
+          </v-btn>
+        </td>
+        <td>
+          <v-btn
+            id="btn4"
+            @click="
+              matchNumber5();
+              playSound();
+            "
+          >
+            5
+          </v-btn>
+        </td>
       </tbody>
     </table>
 
@@ -69,6 +115,22 @@ export default {
     };
   },
   methods: {
+    playSound() {
+      var sound1 =
+        "http://soundbible.com/mp3/Air Plane Ding-SoundBible.com-496729130.mp3";
+      var sound2 =
+        "https://soundbible.com/mp3/Basketball Game-SoundBible.com-932524357.mp3";
+      if (
+        sound1 &&
+        (this.currNumber != this.targetNumber || this.counter == 1)
+      ) {
+        var audio = new Audio(sound1);
+        audio.play();
+      } else {
+        var audio2 = new Audio(sound2);
+        audio2.play();
+      }
+    },
     matchNumber1() {
       this.currNumber = 1;
       this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
