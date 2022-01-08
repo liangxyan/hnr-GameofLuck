@@ -120,12 +120,17 @@ export default {
         "http://soundbible.com/mp3/Air Plane Ding-SoundBible.com-496729130.mp3";
       var sound2 =
         "https://soundbible.com/mp3/Basketball Game-SoundBible.com-932524357.mp3";
+      var tryAgn =
+        "https://soundbible.com/mp3/Smashing-Yuri_Santana-1233262689.mp3";
       if (
         sound1 &&
         (this.currNumber != this.targetNumber || this.counter == 1)
       ) {
         var audio = new Audio(sound1);
         audio.play();
+      } else if (this.currNumber != this.targetNumber && this.counter == 10) {
+        var retry = new Audio(tryAgn);
+        retry.play();
       } else {
         var audio2 = new Audio(sound2);
         audio2.play();
@@ -135,7 +140,6 @@ export default {
       this.currNumber = 1;
       this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
       if (this.targetNumber == this.currNumber && this.counter > 1) {
-        console.log("Congrats!", this.counter);
         this.match = true;
       } else {
         if (this.counter < 10) {
@@ -152,8 +156,6 @@ export default {
       this.currNumber = 2;
       this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
       if (this.targetNumber == this.currNumber && this.counter > 1) {
-        //this.counter = 0;
-        console.log("Congrats!", this.counter);
         this.match = true;
       } else {
         if (this.counter < 10) {
@@ -170,8 +172,6 @@ export default {
       this.currNumber = 3;
       this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
       if (this.targetNumber == this.currNumber && this.counter > 1) {
-        //this.counter = 0;
-        console.log("Congrats!", this.counter);
         this.match = true;
       } else {
         if (this.counter < 10) {
@@ -188,8 +188,6 @@ export default {
       this.currNumber = 4;
       this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
       if (this.targetNumber == this.currNumber && this.counter > 1) {
-        //this.counter = 0;
-        console.log("Congrats!", this.counter);
         this.match = true;
       } else {
         if (this.counter < 10) {
@@ -206,8 +204,6 @@ export default {
       this.currNumber = 5;
       this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
       if (this.targetNumber == this.currNumber && this.counter > 1) {
-        //this.counter = 0;
-        console.log("Congrats!", this.counter);
         this.match = true;
       } else {
         if (this.counter < 10) {
