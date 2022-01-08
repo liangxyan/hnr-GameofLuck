@@ -148,8 +148,8 @@ export default {
       if (this.counter > 10) {
         this.out = true;
       }
-      console.log(this.targetNumber);
-      console.log(this.currNumber);
+      //console.log(this.targetNumber);
+      //console.log(this.currNumber);
     },
     matchNumber2() {
       this.currNumber = 2;
@@ -162,8 +162,8 @@ export default {
       if (this.counter > 10) {
         this.out = true;
       }
-      console.log(this.targetNumber);
-      console.log(this.currNumber);
+      //console.log(this.targetNumber);
+      //console.log(this.currNumber);
     },
     matchNumber3() {
       this.currNumber = 3;
@@ -176,8 +176,8 @@ export default {
       if (this.counter > 10) {
         this.out = true;
       }
-      console.log(this.targetNumber);
-      console.log(this.currNumber);
+      //console.log(this.targetNumber);
+      //console.log(this.currNumber);
     },
     matchNumber4() {
       this.currNumber = 4;
@@ -190,8 +190,8 @@ export default {
       if (this.counter > 10) {
         this.out = true;
       }
-      console.log(this.targetNumber);
-      console.log(this.currNumber);
+      //console.log(this.targetNumber);
+      //console.log(this.currNumber);
     },
     matchNumber5() {
       this.currNumber = 5;
@@ -204,8 +204,8 @@ export default {
       if (this.counter > 10) {
         this.out = true;
       }
-      console.log(this.targetNumber);
-      console.log(this.currNumber);
+      //console.log(this.targetNumber);
+      //console.log(this.currNumber);
     },
     playAgain() {
       this.counter = 0;
