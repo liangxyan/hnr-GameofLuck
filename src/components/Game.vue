@@ -124,11 +124,12 @@ export default {
         "https://soundbible.com/mp3/Smashing-Yuri_Santana-1233262689.mp3";
       if (
         sound1 &&
-        (this.currNumber != this.targetNumber || this.counter == 1)
+        ((this.counter <= 10 && this.currNumber != this.targetNumber) ||
+          this.counter == 1)
       ) {
         var audio = new Audio(sound1);
         audio.play();
-      } else if (this.currNumber != this.targetNumber && this.counter == 10) {
+      } else if (this.out == true) {
         var retry = new Audio(tryAgn);
         retry.play();
       } else {
@@ -142,11 +143,9 @@ export default {
       if (this.targetNumber == this.currNumber && this.counter > 1) {
         this.match = true;
       } else {
-        if (this.counter < 10) {
-          this.counter++;
-        }
+        this.counter++;
       }
-      if (this.counter == 10) {
+      if (this.counter > 10) {
         this.out = true;
       }
       console.log(this.targetNumber);
@@ -158,11 +157,9 @@ export default {
       if (this.targetNumber == this.currNumber && this.counter > 1) {
         this.match = true;
       } else {
-        if (this.counter < 10) {
-          this.counter++;
-        }
+        this.counter++;
       }
-      if (this.counter == 10) {
+      if (this.counter > 10) {
         this.out = true;
       }
       console.log(this.targetNumber);
@@ -174,11 +171,9 @@ export default {
       if (this.targetNumber == this.currNumber && this.counter > 1) {
         this.match = true;
       } else {
-        if (this.counter < 10) {
-          this.counter++;
-        }
+        this.counter++;
       }
-      if (this.counter == 10) {
+      if (this.counter > 10) {
         this.out = true;
       }
       console.log(this.targetNumber);
@@ -190,11 +185,9 @@ export default {
       if (this.targetNumber == this.currNumber && this.counter > 1) {
         this.match = true;
       } else {
-        if (this.counter < 10) {
-          this.counter++;
-        }
+        this.counter++;
       }
-      if (this.counter == 10) {
+      if (this.counter > 10) {
         this.out = true;
       }
       console.log(this.targetNumber);
@@ -206,11 +199,9 @@ export default {
       if (this.targetNumber == this.currNumber && this.counter > 1) {
         this.match = true;
       } else {
-        if (this.counter < 10) {
-          this.counter++;
-        }
+        this.counter++;
       }
-      if (this.counter == 10) {
+      if (this.counter > 10) {
         this.out = true;
       }
       console.log(this.targetNumber);
