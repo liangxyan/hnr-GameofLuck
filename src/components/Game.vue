@@ -70,8 +70,7 @@
         <v-card v-if="counter > 1 && match == false" width="500px" id="fail">
           <v-card-text id="outcometxt"
             >oops try again :P <br /><br />
-            Correct button:
-            {{ this.targetNumber }}
+            <i>Correct button: {{ this.targetNumber }}</i>
           </v-card-text>
         </v-card>
       </v-col>
