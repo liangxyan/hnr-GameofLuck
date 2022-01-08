@@ -4,13 +4,17 @@
       <br /><br /><br />
       <h2>Welcome!</h2>
       <br />
-      <p>Feeling bored? Test your luck right here hic hic hic</p>
+      <p id="intro">
+        Feeling bored? Test your luck right here with this literally very random
+        game! Good Luck!
+      </p>
 
       <h3>Instructions:</h3>
       <p>
         5 buttons, 10 rounds. Choose within 5 buttons and see if you picked the
         correct button within 10 tries. <br />
-        No one really knows which button is THE ONE for each round!
+        No one really knows which button is THE ONE for each round! Click the
+        start button below to play :))
       </p>
       <br />
       <button v-on:click="start()" type="button">Start</button>
@@ -46,8 +50,13 @@ export default {
 h2 {
   font-size: 3em;
 }
-#header {
-  background-color: #2e70d3;
+
+h3 {
+  font-size: x-large;
+}
+
+#intro {
+  color: rgb(107, 107, 107);
 }
 
 button {

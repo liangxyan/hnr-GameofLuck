@@ -1,7 +1,7 @@
 <template>
   <div>
     <br /><br /><br />
-    <h2>Round {{ this.counter }}</h2>
+    <h2 v-if="this.counter <= 10">Round {{ this.counter }}</h2>
     <br />
     <table id="buttonRow" style="width: 85%">
       <thead></thead>
@@ -68,7 +68,11 @@
     <v-container id="outcome">
       <v-col md="6" lg="6">
         <v-card v-if="counter > 1 && match == false" width="500px" id="fail">
-          <v-card-text id="outcometxt">oops try again :P</v-card-text>
+          <v-card-text id="outcometxt"
+            >oops try again :P <br /><br />
+            Correct button:
+            {{ this.targetNumber }}
+          </v-card-text>
         </v-card>
       </v-col>
     </v-container>
@@ -122,25 +126,22 @@ export default {
         "https://soundbible.com/mp3/Basketball Game-SoundBible.com-932524357.mp3";
       var tryAgn =
         "https://soundbible.com/mp3/Smashing-Yuri_Santana-1233262689.mp3";
-      if (
-        sound1 &&
-        ((this.counter <= 10 && this.currNumber != this.targetNumber) ||
-          this.counter == 1)
-      ) {
-        var audio = new Audio(sound1);
-        audio.play();
-      } else if (this.out == true) {
+
+      if (this.out == true) {
         var retry = new Audio(tryAgn);
         retry.play();
-      } else {
+      } else if (this.match) {
         var audio2 = new Audio(sound2);
         audio2.play();
+      } else {
+        var audio = new Audio(sound1);
+        audio.play();
       }
     },
     matchNumber1() {
       this.currNumber = 1;
       this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
-      if (this.targetNumber == this.currNumber && this.counter > 1) {
+      if (this.targetNumber == this.currNumber && this.counter != 1) {
         this.match = true;
       } else {
         this.counter++;
@@ -154,7 +155,7 @@ export default {
     matchNumber2() {
       this.currNumber = 2;
       this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
-      if (this.targetNumber == this.currNumber && this.counter > 1) {
+      if (this.targetNumber == this.currNumber && this.counter != 1) {
         this.match = true;
       } else {
         this.counter++;
@@ -168,7 +169,7 @@ export default {
     matchNumber3() {
       this.currNumber = 3;
       this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
-      if (this.targetNumber == this.currNumber && this.counter > 1) {
+      if (this.targetNumber == this.currNumber && this.counter != 1) {
         this.match = true;
       } else {
         this.counter++;
@@ -182,7 +183,7 @@ export default {
     matchNumber4() {
       this.currNumber = 4;
       this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
-      if (this.targetNumber == this.currNumber && this.counter > 1) {
+      if (this.targetNumber == this.currNumber && this.counter != 1) {
         this.match = true;
       } else {
         this.counter++;
@@ -196,7 +197,7 @@ export default {
     matchNumber5() {
       this.currNumber = 5;
       this.targetNumber = Math.floor(Math.random() * (5 - 1 + 1) + 1);
-      if (this.targetNumber == this.currNumber && this.counter > 1) {
+      if (this.targetNumber == this.currNumber && this.counter != 1) {
         this.match = true;
       } else {
         this.counter++;
